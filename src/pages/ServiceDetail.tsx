@@ -53,7 +53,7 @@ const ServiceDetail = () => {
     return (
       <div className="min-h-screen bg-background">
         <Navbar />
-        <div className="container-custom section-padding text-center">
+        <div className="container-custom section-padding text-center pt-32">
           <h1 className="text-4xl font-display font-bold mb-4">Service Not Found</h1>
           <p className="text-muted-foreground mb-8">The service you're looking for doesn't exist.</p>
           <Button asChild>
@@ -70,7 +70,7 @@ const ServiceDetail = () => {
       <Navbar />
       <main className="pt-24">
         {/* Header */}
-        <section className="section-padding bg-card/50">
+        <section className="section-padding bg-secondary">
           <div className="container-custom">
             <Link to="/services" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
               <ArrowLeft size={18} />
@@ -83,16 +83,16 @@ const ServiceDetail = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}>
+                <div className="w-20 h-20 rounded-2xl bg-primary flex items-center justify-center mb-6">
                   <service.icon className="text-white" size={40} />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-foreground">
                   {service.title}
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
                   {service.description}
                 </p>
-                <Button variant="hero" size="lg" asChild>
+                <Button variant="dark" size="lg" asChild>
                   <Link to="/contact">Start Your Project</Link>
                 </Button>
               </motion.div>
@@ -101,9 +101,9 @@ const ServiceDetail = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="card-elevated p-8 rounded-2xl"
+                className="bg-background p-8 rounded-2xl shadow-lg"
               >
-                <h3 className="text-xl font-display font-semibold mb-6">Key Features</h3>
+                <h3 className="text-xl font-display font-semibold mb-6 text-foreground">Key Features</h3>
                 <ul className="space-y-4">
                   {details.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">
@@ -126,9 +126,8 @@ const ServiceDetail = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="text-primary font-medium mb-4 block">Our Process</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold">
-                How We <span className="gradient-text">Deliver Results</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                How We Deliver Results
               </h2>
             </motion.div>
 
@@ -140,9 +139,9 @@ const ServiceDetail = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="card-elevated p-6 rounded-xl text-center relative"
+                  className="bg-secondary p-6 rounded-xl text-center"
                 >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-display font-bold flex items-center justify-center mx-auto mb-4">
+                  <div className="w-10 h-10 rounded-full bg-primary text-white font-display font-bold flex items-center justify-center mx-auto mb-4">
                     {index + 1}
                   </div>
                   <h3 className="font-display font-semibold text-foreground">{step}</h3>
@@ -153,7 +152,7 @@ const ServiceDetail = () => {
         </section>
 
         {/* Technologies */}
-        <section className="section-padding bg-card/50">
+        <section className="section-padding section-dark">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -161,9 +160,8 @@ const ServiceDetail = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <span className="text-primary font-medium mb-4 block">Technologies</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold">
-                Tools We <span className="gradient-text">Use</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white">
+                Tools We Use
               </h2>
             </motion.div>
 
@@ -175,7 +173,7 @@ const ServiceDetail = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="px-6 py-3 rounded-full bg-secondary border border-border text-foreground font-medium"
+                  className="px-6 py-3 rounded-full bg-white/10 text-white font-medium"
                 >
                   {tech}
                 </motion.div>

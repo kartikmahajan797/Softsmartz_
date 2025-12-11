@@ -1,129 +1,79 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroIllustration from '@/assets/hero-illustration.png';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
-        <div className="absolute inset-0 bg-hero-pattern" />
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="container-custom relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-background overflow-hidden">
+      <div className="container-custom">
+        <div className="text-center max-w-4xl mx-auto">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight tracking-tight mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary font-medium">
-              <Sparkles size={16} />
-              Building Future-Ready Digital Solutions
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight"
-          >
-            Transform Your Vision Into{' '}
-            <span className="gradient-text">Powerful Reality</span>
+            BUILDING FUTURE READY APPS & PLATFORMS WITH{' '}
+            <span className="text-primary">AI SOLUTIONS</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
           >
-            We craft innovative software solutions, stunning designs, and AI-powered 
-            applications that drive business growth and deliver exceptional user experiences.
+            Enter the world of brands with our tailor-made solutions for your business. 
+            We assist our clients by delivering consulting, development and marketing services.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="dark" size="xl" asChild>
               <Link to="/contact">
-                Get Started
-                <ArrowRight size={20} />
+                Get in Touch
               </Link>
             </Button>
-            <Button variant="hero-outline" size="xl" asChild>
-              <Link to="/portfolio">View Our Work</Link>
-            </Button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {[
-              { value: '200+', label: 'Projects Delivered' },
-              { value: '50+', label: 'Happy Clients' },
-              { value: '10+', label: 'Years Experience' },
-              { value: '99%', label: 'Client Satisfaction' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-display font-bold gradient-text mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
           </motion.div>
         </div>
+
+        {/* Hero Illustration */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-16 md:mt-20 flex justify-center"
+        >
+          <div className="relative">
+            <img
+              src={heroIllustration}
+              alt="Software development illustration"
+              className="w-full max-w-3xl mx-auto"
+            />
+            {/* Floating decorative elements */}
+            <motion.div
+              className="absolute -top-4 -left-4 w-3 h-3 rounded-full bg-primary/30"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            />
+            <motion.div
+              className="absolute top-1/4 -right-8 w-2 h-2 rounded-full bg-muted-foreground/30"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+            <motion.div
+              className="absolute bottom-8 -left-12 w-4 h-4 rounded-full border-2 border-muted-foreground/20"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity }}
+            />
+          </div>
+        </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-        </div>
-      </motion.div>
     </section>
   );
 };

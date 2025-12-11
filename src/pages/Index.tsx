@@ -3,8 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
-import { PortfolioSection } from '@/components/sections/PortfolioSection';
-import { WhyChooseSection } from '@/components/sections/WhyChooseSection';
+import { TechSection } from '@/components/sections/TechSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 
@@ -16,8 +15,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <PortfolioSection />
-        <WhyChooseSection />
+        <TechSection />
         <TestimonialsSection />
         <ContactSection />
       </main>
