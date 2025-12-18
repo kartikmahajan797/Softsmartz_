@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const clients = [
-  { name: 'TechCorp', initials: 'TC', color: 'text-blue-600' },
+  { name: 'TechCorp', initials: 'TC', color: 'text-blue-600',image: '' },
   { name: 'InnovateLabs', initials: 'IL', color: 'text-purple-600' },
   { name: 'Digital First', initials: 'DF', color: 'text-emerald-600' },
   { name: 'CloudBase', initials: 'CB', color: 'text-cyan-600' },
