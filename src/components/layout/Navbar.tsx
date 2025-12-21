@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useTheme } from 'next-themes';
 
 const navLinks = [
   { name: 'Services', path: '/services' },
@@ -16,6 +17,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,10 @@ export const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   return (
@@ -57,13 +64,27 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:block">
-          <Button variant="dark" size="default" asChild>
-            <Link to="/contact" className="gap-2">
-              Let's talk
-              <ArrowRight size={16} />
-            </Link>
-          </Button>
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            aria-label="Toggle theme"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="p-2 rounded hover:bg-muted/50"
+          >
+            {mounted ? (
+              theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />
+            ) : (
+              <Sun size={18} />
+            )}
+          </button>
+
+          <div>
+            <Button variant="dark" size="default" asChild>
+              <Link to="/contact" className="gap-2">
+                Let's talk
+                <ArrowRight size={16} />
+              </Link>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -101,6 +122,19 @@ export const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              <div className="pt-2">
+                <button
+                  aria-label="Toggle theme"
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 rounded hover:bg-muted/50"
+                >
+                  {mounted ? (
+                    theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />
+                  ) : (
+                    <Sun size={18} />
+                  )}
+                </button>
+              </div>
               <Button variant="dark" size="lg" className="mt-4" asChild>
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Let's talk

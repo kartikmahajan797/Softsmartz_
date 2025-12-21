@@ -282,3 +282,16 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Dark-mode overrides for commonly used utility classes so existing
+   components that use static Tailwind classes respond to theme toggling. */
+.dark .bg-white { background-color: hsl(var(--background)) !important; }
+.dark .text-gray-900 { color: hsl(var(--foreground)) !important; }
+.dark .text-gray-600 { color: hsl(var(--muted-foreground)) !important; }
+.dark .bg-gray-100 { background-color: hsl(var(--card)) !important; }
+.dark .border-gray-100 { border-color: hsl(var(--border)) !important; }
+.dark .text-white { color: hsl(var(--card-foreground)) !important; }
+.dark .bg-gray-900 { background-color: hsl(var(--foreground)) !important; }
+.dark .text-gray-700 { color: hsl(var(--muted-foreground)) !important; }
+.dark .bg-gray-50 { background-color: hsl(var(--background)) !important; }
+

@@ -16,6 +16,7 @@ import ratan from  '../assets/ratan.png'
 import urban from '../assets/urban.png'
 import camp from '../assets/camp.png'
 import fire from '../assets/fire.png'
+import tridenity from '../assets/tridenity.png'
 
 const projects = [
   {
@@ -112,6 +113,14 @@ const projects = [
     category: 'UI/UX Design',
     description: 'Complete brand identity design for a tech startup.',
     image: fire,
+    tags: ['Branding', 'Illustrator', 'Motion'],
+  },
+  {
+    id: 11,
+    title: 'Brand Identity',
+    category: 'UI/UX Design',
+    description: 'Complete brand identity design for a tech startup.',
+    image: tridenity,
     tags: ['Branding', 'Illustrator', 'Motion'],
   },
 ];

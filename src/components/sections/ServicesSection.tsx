@@ -10,6 +10,7 @@ import {
   Brain, 
   Smartphone, 
   Globe
+  
 } from 'lucide-react';
 
 export const services = [
@@ -55,6 +56,25 @@ export const services = [
     title: 'Web App Development',
     description: 'Modern web applications with cutting-edge frameworks, responsive designs, and performant architecture.',
   },
+  {
+  id: 'branding-marketing',
+  icon: ShoppingBag,
+  title: 'Branding & Marketing',
+  description: 'Professional branding and digital marketing services including brand strategy, logo design, content marketing, social media marketing, and performance-driven campaigns to grow brand awareness and customer engagement.',
+},
+{
+  id: 'packaging-design',
+  icon: Palette,
+  title: 'Packaging Design',
+  description: 'Custom packaging design services focused on product branding, creative packaging, label design, and print-ready solutions that enhance shelf impact, brand recognition, and customer experience.',
+},
+{
+  id: 'seo-services',
+  icon: Globe,
+  title: 'SEO Services',
+  description: 'Result-driven SEO services including on-page SEO, off-page SEO, technical SEO, keyword research, content optimization, and performance tracking to improve website rankings, organic traffic, and online visibility.',
+}
+
 ];
 
 export const ServicesSection = () => {
