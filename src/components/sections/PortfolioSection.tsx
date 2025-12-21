@@ -4,6 +4,9 @@ import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import dolchi from '../../assets/dolchi.png';
+import buyYourWish from '../../assets/buyYourWish.png';
+import veda from '../../assets/veda.png';
 
 const projects = [
   {
@@ -11,7 +14,7 @@ const projects = [
     title: 'E-Commerce Platform',
     category: 'Web Development',
     description: 'A modern e-commerce solution with advanced filtering and payment integration.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+    image: dolchi,
     tags: ['React', 'Node.js', 'Stripe'],
   },
   {
@@ -19,7 +22,7 @@ const projects = [
     title: 'Healthcare App',
     category: 'Mobile App',
     description: 'Patient management system with real-time appointment scheduling.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
+    image: buyYourWish,
     tags: ['React Native', 'Firebase', 'AI'],
   },
   {
@@ -27,7 +30,7 @@ const projects = [
     title: 'Finance Dashboard',
     category: 'UI/UX Design',
     description: 'Comprehensive financial analytics dashboard with real-time data.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: veda,
     tags: ['Figma', 'React', 'D3.js'],
   },
   {
@@ -127,7 +130,9 @@ export const PortfolioSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    // className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover"
+
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <Button variant="primary" size="sm">

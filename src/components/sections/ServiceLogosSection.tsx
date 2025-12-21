@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ssh from '../../assets/ssh.png';
+
 import { ArrowRight } from 'lucide-react';
 
 const serviceLogos = [
@@ -10,7 +12,7 @@ const serviceLogos = [
     name: 'Shopify',
     description: 'E-commerce Solutions',
     color: 'from-green-500 to-emerald-600',
-    icon: '🛒',
+    icon: { type: 'image', src: ssh, alt: 'Shopify' },
   },
   {
     id: 'ui-ux',
@@ -89,7 +91,11 @@ export const ServiceLogosSection = () => {
               >
                 <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full border border-slate-100 group-hover:border-slate-200">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
+                    {typeof service.icon === 'object' ? (
+                      <img src={service.icon.src} alt={service.icon.alt} className="w-8 h-8" />
+                    ) : (
+                      service.icon
+                    )}
                   </div>
                   <h3 className="font-display font-bold text-foreground text-sm mb-1">
                     {service.name}

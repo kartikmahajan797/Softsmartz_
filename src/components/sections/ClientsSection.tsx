@@ -2,14 +2,23 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import buy from '../../assets/buy.png';
+import rt from '../../assets/rt.png';
+import brow from '../../assets/brow.png';
+import vl from '../../assets/vl.png';
+import gy from '../../assets/gy.png';
+import { Image } from 'lucide-react';
+
+
+
 
 
 const clients = [
-  { name: 'TechCorp', initials: 'TC', color: 'text-blue-600',image: '' },
-  { name: 'InnovateLabs', initials: 'IL', color: 'text-purple-600' },
-  { name: 'Digital First', initials: 'DF', color: 'text-emerald-600' },
-  { name: 'CloudBase', initials: 'CB', color: 'text-cyan-600' },
-  { name: 'StartupX', initials: 'SX', color: 'text-orange-600' },
+  { name: 'TechCorp', initials: 'TC',  image: rt },
+  { name: 'InnovateLabs', initials: 'IL', color: 'text-purple-600', image: brow },
+  { name: 'Digital First', initials: 'DF', color: 'text-emerald-600', image: vl },
+  { name: 'CloudBase', initials: 'CB', color: 'text-cyan-600', image: buy },
+  { name: 'StartupX', initials: 'SX', color: 'text-orange-600', image: gy },
   { name: 'FutureTech', initials: 'FT', color: 'text-pink-600' },
   { name: 'DataDrive', initials: 'DD', color: 'text-indigo-600' },
   { name: 'AppWorks', initials: 'AW', color: 'text-amber-600' },
@@ -41,9 +50,14 @@ export const ClientsSection = () => {
               className="group"
             >
               <div className="w-28 h-14 md:w-36 md:h-16 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl flex items-center justify-center hover:from-slate-100 hover:to-slate-200 transition-all duration-300 border border-slate-100 group-hover:border-slate-200 group-hover:shadow-md">
-                <span className={`font-display font-bold text-xl md:text-2xl ${client.color}`}>
-                  {client.initials}
-                </span>
+                {client.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={client.image} alt={client.name} className="max-w-[80%] max-h-[70%] object-contain" />
+                ) : (
+                  <span className={`font-display font-bold text-xl md:text-2xl ${client.color}`}>
+                    {client.initials}
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}
