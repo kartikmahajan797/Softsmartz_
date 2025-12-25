@@ -56,9 +56,9 @@ export const HeroSection = () => {
             className="mt-20 flex flex-wrap justify-center gap-12 md:gap-20"
           >
             {[
-              { value: '200+', label: 'Projects' },
-              { value: '50+', label: 'Clients' },
-              { value: '10+', label: 'Years' },
+              { value: '50+', label: 'Projects' },
+              { value: '30+', label: 'Clients' },
+              { value: '1+', label: 'Years' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-display font-bold text-foreground mb-1">

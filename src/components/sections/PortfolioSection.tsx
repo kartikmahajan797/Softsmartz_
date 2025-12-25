@@ -9,46 +9,52 @@ import buyYourWish from '../../assets/buyYourWish.png';
 import veda from '../../assets/veda.png';
 
 const projects = [
+   {
+  id: 1,
+  title: 'Dolchico – Fashion E-Commerce Platform',
+  category: 'MERN Stack Development',
+  description: 'A full-featured fashion e-commerce platform with product listings, advanced filtering, secure authentication, cart management, and online payment integration.',
+  image: dolchi,
+  tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Stripe'],
+  liveUrl: 'https://dolchico.com/',
+},
+
   {
-    id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Development',
-    description: 'A modern e-commerce solution with advanced filtering and payment integration.',
-    image: dolchi,
-    tags: ['React', 'Node.js', 'Stripe'],
-  },
+  id: 2,
+  title: 'buyYourWish',
+  category: 'E-Commerce Website',
+  description: 'A fully functional Shopify-based e-commerce store with product listings, secure checkout, payment gateway integration, and a responsive user-friendly shopping experience.',
+  image: buyYourWish,
+  tags: ['Shopify', 'Liquid', 'E-Commerce', 'Payment Gateway', 'UI/UX'],
+  liveUrl: 'https://buyyourwish.com/',
+},
+
   {
-    id: 2,
-    title: 'Healthcare App',
-    category: 'Mobile App',
-    description: 'Patient management system with real-time appointment scheduling.',
-    image: buyYourWish,
-    tags: ['React Native', 'Firebase', 'AI'],
-  },
-  {
-    id: 3,
-    title: 'Finance Dashboard',
-    category: 'UI/UX Design',
-    description: 'Comprehensive financial analytics dashboard with real-time data.',
-    image: veda,
-    tags: ['Figma', 'React', 'D3.js'],
-  },
-  {
-    id: 4,
-    title: 'AI Chatbot System',
-    category: 'AI/ML',
-    description: 'Intelligent customer support chatbot with natural language processing.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    tags: ['Python', 'TensorFlow', 'NLP'],
-  },
-  {
-    id: 5,
-    title: 'Retail Management',
-    category: 'Shopify',
-    description: 'Custom Shopify store with inventory management and analytics.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-    tags: ['Shopify', 'Liquid', 'APIs'],
-  },
+  id: 3,
+  title: 'Veda Box',
+  category: 'E-Commerce (Shopify)',
+  description: 'A Shopify-based wellness & healthcare e-commerce store offering Ayurvedic supplements and natural health products with a clean and user-friendly shopping experience.',
+  image: veda,
+  liveUrl: 'https://vedabox.in/',
+  tags: ['Shopify', 'Liquid', 'UI/UX', 'Figma','Payment Gateway'],
+}
+,
+  // {
+  //   id: 4,
+  //   title: 'AI Chatbot System',
+  //   category: 'AI/ML',
+  //   description: 'Intelligent customer support chatbot with natural language processing.',
+  //   image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+  //   tags: ['Python', 'TensorFlow', 'NLP'],
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Retail Management',
+  //   category: 'Shopify',
+  //   description: 'Custom Shopify store with inventory management and analytics.',
+  //   image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+  //   tags: ['Shopify', 'Liquid', 'APIs'],
+  // },
 ];
 
 export const PortfolioSection = () => {
@@ -56,13 +62,13 @@ export const PortfolioSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % Math.max(1, projects.length - 2));
-  };
+  // const nextSlide = () => {
+  //   setCurrentIndex((prev) => (prev + 1) % Math.max(1, projects.length - 2));
+  // };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + Math.max(1, projects.length - 2)) % Math.max(1, projects.length - 2));
-  };
+  // const prevSlide = () => {
+  //   setCurrentIndex((prev) => (prev - 1 + Math.max(1, projects.length - 2)) % Math.max(1, projects.length - 2));
+  // };
 
   const getVisibleProjects = () => {
     return projects.slice(currentIndex, currentIndex + 3);
@@ -98,7 +104,7 @@ export const PortfolioSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex gap-3"
           >
-            <button
+            {/* <button
               onClick={prevSlide}
               className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-primary hover:bg-primary transition-all"
               aria-label="Previous project"
@@ -111,7 +117,7 @@ export const PortfolioSection = () => {
               aria-label="Next project"
             >
               <ChevronRight size={24} />
-            </button>
+            </button> */}
           </motion.div>
         </div>
 
@@ -135,8 +141,10 @@ export const PortfolioSection = () => {
 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <Button variant="primary" size="sm">
-                      View Project <ExternalLink size={14} />
+                    <Button variant="primary" size="sm" asChild>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        View Project <ExternalLink size={14} />
+                      </a>
                     </Button>
                   </div>
                 </div>

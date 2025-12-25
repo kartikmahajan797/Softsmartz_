@@ -7,48 +7,50 @@ import ssh from '../../assets/ssh.png';
 import { ArrowRight } from 'lucide-react';
 
 const serviceLogos = [
-  {
-    id: 'shopify',
-    name: 'Shopify',
-    description: 'E-commerce Solutions',
-    color: 'from-green-500 to-emerald-600',
-    icon: { type: 'image', src: ssh, alt: 'Shopify' },
-  },
-  {
-    id: 'ui-ux',
-    name: 'UI/UX',
-    description: 'User Experience',
-    color: 'from-violet-500 to-purple-600',
-    icon: '🎨',
-  },
-  {
-    id: 'graphic-design',
-    name: 'Graphics',
-    description: 'Visual Design',
-    color: 'from-pink-500 to-rose-600',
-    icon: '✨',
-  },
-  {
+  
+   {
     id: 'software-development',
     name: 'Software',
     description: 'Custom Solutions',
-    color: 'from-blue-500 to-indigo-600',
+    color: 'from-blue-500 to-indigo-600 dark:from-blue-700 dark:to-indigo-900',
     icon: '💻',
   },
   {
     id: 'ai-ml',
     name: 'AI/ML',
     description: 'Smart Systems',
-    color: 'from-orange-500 to-amber-600',
+    color: 'from-orange-500 to-amber-600 dark:from-orange-600 dark:to-amber-700',
     icon: '🤖',
   },
   {
     id: 'app-development',
     name: 'Mobile',
     description: 'App Development',
-    color: 'from-cyan-500 to-teal-600',
+    color: 'from-cyan-500 to-teal-600 dark:from-cyan-600 dark:to-teal-700',
     icon: '📱',
   },
+  {
+    id: 'shopify',
+    name: 'Shopify',
+    description: 'E-commerce Solutions',
+    color: 'from-green-500 to-emerald-600 dark:from-green-600 dark:to-emerald-700',
+    icon: { type: 'image', src: ssh, alt: 'Shopify' },
+  },
+  {
+    id: 'ui-ux',
+    name: 'UI/UX',
+    description: 'User Experience',
+    color: 'from-violet-500 to-purple-600 dark:from-violet-700 dark:to-purple-800',
+    icon: '🎨',
+  },
+  {
+    id: 'graphic-design',
+    name: 'Graphics',
+    description: 'Visual Design',
+    color: 'from-pink-500 to-rose-600 dark:from-pink-700 dark:to-rose-800',
+    icon: '✨',
+  },
+ 
 ];
 
 export const ServiceLogosSection = () => {
@@ -89,7 +91,7 @@ export const ServiceLogosSection = () => {
                 to={`/services/${service.id}`}
                 className="block group h-full"
               >
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full border border-slate-100 group-hover:border-slate-200">
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 h-full border border-slate-100 dark:border-slate-700 group-hover:border-slate-200">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {typeof service.icon === 'object' ? (
                       <img src={service.icon.src} alt={service.icon.alt} className="w-8 h-8" />

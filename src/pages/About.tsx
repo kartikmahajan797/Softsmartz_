@@ -7,10 +7,10 @@ import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { Users, Award, Briefcase, Globe } from 'lucide-react';
 
 const stats = [
-  { icon: Briefcase, value: '200+', label: 'Projects Completed' },
-  { icon: Users, value: '50+', label: 'Team Members' },
-  { icon: Globe, value: '30+', label: 'Countries Served' },
-  { icon: Award, value: '10+', label: 'Years Experience' },
+  { icon: Briefcase, value: '50+', label: 'Projects Completed' },
+  { icon: Users, value: '15+', label: 'Team Members' },
+  { icon: Globe, value: '5+', label: 'Countries Served' },
+  { icon: Award, value: '1+', label: 'Years Experience' },
 ];
 
 const About = () => {

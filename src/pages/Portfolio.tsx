@@ -20,109 +20,135 @@ import tridenity from '../assets/tridenity.png'
 
 const projects = [
   {
-    id: 1,
-    title: 'E-Commerce Platform',
-    category: 'Web Development',
-    description: 'A modern e-commerce solution with advanced filtering and payment integration.',
-    image: dolchi,
-    tags: ['React', 'Node.js', 'Stripe'],
-  },
+  id: 1,
+  title: 'Dolchico – Fashion E-Commerce Platform',
+  category: 'MERN Stack Development',
+  description: 'A full-featured fashion e-commerce platform with product listings, advanced filtering, secure authentication, cart management, and online payment integration.',
+  image: dolchi,
+  tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'Stripe'],
+  liveUrl: 'https://dolchico.com/',
+},
+
   {
-    id: 2,
-    title: 'buyYourWish',
-    category: 'Mobile App',
-    description: 'Patient management system with real-time appointment scheduling.',
-    image: buyYourWish,
-    tags: ['React Native', 'Firebase', 'AI'],
-  },
+  id: 2,
+  title: 'buyYourWish',
+  category: 'E-Commerce Website',
+  description: 'A fully functional Shopify-based e-commerce store with product listings, secure checkout, payment gateway integration, and a responsive user-friendly shopping experience.',
+  image: buyYourWish,
+  tags: ['Shopify', 'Liquid', 'E-Commerce', 'Payment Gateway', 'UI/UX'],
+  liveUrl: 'https://buyyourwish.com/',
+},
+
   {
-    id: 3,
-    title: 'veda',
-    category: 'UI/UX Design',
-    description: 'Comprehensive financial analytics dashboard with real-time data.',
-    image: veda,
-    tags: ['Figma', 'React', 'D3.js'],
-  },
+  id: 3,
+  title: 'Veda Box',
+  category: 'E-Commerce (Shopify)',
+  description: 'A Shopify-based wellness & healthcare e-commerce store offering Ayurvedic supplements and natural health products with a clean and user-friendly shopping experience.',
+  image: veda,
+  liveUrl: 'https://vedabox.in/',
+  tags: ['Shopify', 'Liquid', 'UI/UX', 'Figma','Payment Gateway'],
+}
+,
+ {
+  id: 4,
+  title: 'Brownkudi',
+  category: 'Next.js & React',
+  description: 'A profile and brand site celebrating Harpal Kaur Dhanjal — popularly known as Brown Kudi — Punjab’s pioneering female welder and inspirational social media influencer. The site highlights her journey of hard work in a male-dominated field, her rise to fame through authentic content, and her impact on empowering young women.',
+  liveUrl: 'https://www.brownkudi.com/',
+  image: brown,
+  tags: ['Next.js', 'React', 'Node.js', 'MongoDB'],
+},
+
+ {
+  id: 5,
+  title: 'Strength Gym Phillaur',
+  category: 'Next.js Web App',
+  description: 'A modern fitness website built using Next.js and Tailwind CSS, featuring a clean and responsive UI, optimized performance, and an engaging user experience for showcasing gym services, memberships, and fitness programs.',
+  image: gym,
+  liveUrl: 'https://www.strengthgymphillaur.in/',
+  tags: ['Next.js', 'Tailwind CSS', 'Modern UI', 'Responsive Design'],
+},
+
   {
-    id: 4,
-    title: 'AI Chatbot System',
-    category: 'AI/ML',
-    description: 'Intelligent customer support chatbot with natural language processing.',
-    image: brown,
-    tags: ['Python', 'TensorFlow', 'NLP'],
-  },
+  id: 6,
+  title: 'Heritage Panjab',
+  category: 'Shopify E-Commerce',
+  description: 'A Shopify-based food e-commerce website offering authentic Punjabi food products, featuring a clean UI, smooth checkout experience, and optimized product browsing.',
+  image: heritaze,
+  liveUrl: 'https://heritagepanjab.com/',
+  tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX','Payment Gateway'],
+},
+
   {
-    id: 5,
-    title: 'Retail Management',
-    category: 'Shopify',
-    description: 'Custom Shopify store with inventory management and analytics.',
-    image: gym,
-    tags: ['Shopify', 'Liquid', 'APIs'],
-  },
+  id: 7,
+  title: 'Angel Assistance Care',
+  category: 'MERN Web Application',
+  description: 'A MERN-based healthcare and disability support website designed to showcase compassionate, personalized NDIS services. The platform highlights a holistic care approach focused on physical, emotional, and social well-being, helping participants and families navigate support services with trust, clarity, and ease.',
+  image: angel,
+  liveUrl: 'https://angelassistancecare.co/',
+  tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Healthcare'],
+},
+
+ {
+  id: 8,
+  title: 'Musafir Films',
+  category: 'React Web App',
+  description: 'A modern, visually rich website built using React and Tailwind CSS for Musafir Films, focused on emotional storytelling and cinematic presentation. The platform captures timeless wedding moments and transforms memories into beautifully crafted visual narratives.',
+  image: musafir,
+  liveUrl: 'https://www.musafirfilm.in/',
+  tags: ['React', 'Tailwind CSS', 'UI/UX Design', 'Branding'],
+},
+
   {
-    id: 6,
-    title: 'Food Delivery App',
-    category: 'Mobile App',
-    description: 'Full-featured food delivery platform with real-time tracking.',
-    image: heritaze,
-    tags: ['Flutter', 'Firebase', 'Maps'],
-  },
+  id: 9,
+  title: 'Ratanmaa – Organic',
+  category: 'Shopify E-Commerce',
+  description: 'A Shopify-based organic food brand website for Ratanmaa, showcasing a homegrown legacy of homemade Khajur Pak. The platform reflects tradition, family values, and authentic taste, offering a smooth shopping experience for customers seeking healthy, artisanal sweets.',
+  image: ratan,
+  liveUrl: 'https://ratanmaa.com/',
+  tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX', 'Payment Gateway'],
+},
+
   {
-    id: 7,
-    title: 'SaaS Dashboard',
-    category: 'Web Development',
-    description: 'Multi-tenant SaaS application with advanced analytics.',
-    image: angel,
-    tags: ['Next.js', 'PostgreSQL', 'AWS'],
-  },
-  {
-    id: 8,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: musafir,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
-  {
-    id: 9,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: ratan,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
-  {
-    id: 10,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: urban,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
-  {
-    id: 10,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: camp,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
+  id: 10,
+  title: 'Urban Drip',
+  category: 'Shopify E-Commerce',
+  description: 'A modern Shopify-based T-shirt e-commerce store featuring a bold streetwear aesthetic, clean UI, and seamless shopping experience tailored for contemporary fashion lovers.',
+  image: urban,
+  liveUrl: 'https://urbandrip.net/',
+  tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX', 'Payment Gateway'],
+}
+,
+ {
+  id: 10,
+  title: 'Campnai',
+  category: 'AI / Web App',
+  description: 'An AI-powered platform serving as your virtual employee for influencer marketing. Built with generative AI and LLMs, Campnai streamlines collaboration, automates manual tasks, and provides clear control over end-to-end AI-powered workflows for marketing teams.',
+  image: camp,
+  liveUrl: 'https://campnai.vercel.app/',
+  tags: ['AI', 'LLM', 'React', 'Web App', 'Generative AI'],
+}
+,
    {
-    id: 10,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: fire,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
+  id: 10,
+  title: 'FireApp',
+  category: 'SaaS Web App',
+  description: 'A modern SaaS platform designed for software product management, helping teams plan, track, and collaborate efficiently. FireApp streamlines workflows, enhances productivity, and provides insights to optimize product development cycles.',
+  image: fire,
+  liveUrl: '#', // Add live URL if available
+  tags: ['SaaS', 'Product Management', 'React', 'UI/UX', 'Collaboration'],
+}
+,
   {
-    id: 11,
-    title: 'Brand Identity',
-    category: 'UI/UX Design',
-    description: 'Complete brand identity design for a tech startup.',
-    image: tridenity,
-    tags: ['Branding', 'Illustrator', 'Motion'],
-  },
+  id: 11,
+  title: 'Tridenity',
+  category: 'Agency Website',
+  description: 'A modern agency website built with Next.js, Tailwind CSS, Node.js, and PostgreSQL. Tridenity designs custom websites and digital solutions that enhance brand presence, engage users, and drive measurable business growth.',
+  image: tridenity,
+  liveUrl: 'https://www.tridenity.com/',
+  tags: ['Next.js', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'UI/UX', 'Agency'],
+}
+
 ];
 
 const Portfolio = () => {
@@ -209,12 +235,24 @@ const Portfolio = () => {
                           }}
                           transition={{ duration: 0.3, delay: 0.1 }}
                         >
-                          <Button 
-                            className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-2.5 text-sm font-medium flex items-center gap-2 shadow-lg"
-                          >
-                            View Project 
-                            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                          </Button>
+                          {project.liveUrl ? (
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                              <Button
+                                className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-2.5 text-sm font-medium flex items-center gap-2 shadow-lg"
+                              >
+                                View Project
+                                <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                              </Button>
+                            </a>
+                          ) : (
+                            <Button
+                              className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-2.5 text-sm font-medium flex items-center gap-2 shadow-lg"
+                              aria-disabled
+                            >
+                              View Project
+                              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                          )}
                         </motion.div>
                       </motion.div>
                     </div>
