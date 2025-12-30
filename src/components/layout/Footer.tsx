@@ -96,11 +96,11 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:hello@softsmartz.com"
+                  href="mailto:Kartikmahajan797@gmail.com"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
-                  hello@softsmartz.com
+                 Kartikmahajan797@gmail.com"
                 </a>
               </li>
               <li>
@@ -109,7 +109,7 @@ export const Footer = () => {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Phone size={16} className="text-primary flex-shrink-0" />
-                  +1 (234) 567-890
+                 +91 7717536523
                 </a>
               </li>
             </ul>
