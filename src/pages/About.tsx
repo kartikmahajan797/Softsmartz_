@@ -13,9 +13,16 @@ const stats = [
   { icon: Award, value: '1+', label: 'Years Experience' },
 ];
 
+import { SEO } from '@/components/seo/SEO';
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="About Us - Our Story & Vision"
+        description="Learn more about Softsmartz, our mission to build tomorrow's digital solutions, and the passionate team behind our success."
+        canonical="https://softsmartz.com/about"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Header */}
@@ -30,7 +37,7 @@ const About = () => {
               >
                 About Softsmartz
               </motion.span>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -47,7 +54,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-xl text-muted-foreground"
               >
-                We're a passionate team of developers, designers, and innovators 
+                We're a passionate team of developers, designers, and innovators
                 dedicated to transforming businesses through technology.
               </motion.p>
             </div>
@@ -95,16 +102,16 @@ const About = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Founded with a vision to bridge the gap between technology and business needs, 
+                    Founded with a vision to bridge the gap between technology and business needs,
                     Softsmartz has grown from a small startup to a leading digital solutions provider.
                   </p>
                   <p>
-                    We believe in the power of technology to transform businesses. Our team of 
-                    experts works tirelessly to deliver solutions that not only meet but exceed 
+                    We believe in the power of technology to transform businesses. Our team of
+                    experts works tirelessly to deliver solutions that not only meet but exceed
                     our clients' expectations.
                   </p>
                   <p>
-                    Today, we're proud to have served clients across 30+ countries, delivering 
+                    Today, we're proud to have served clients across 30+ countries, delivering
                     over 200 successful projects that have helped businesses scale and succeed.
                   </p>
                 </div>

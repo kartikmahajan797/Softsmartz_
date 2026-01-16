@@ -5,9 +5,16 @@ import { services } from '@/components/sections/ServicesSection';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+import { SEO } from '@/components/seo/SEO';
+
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Our Services - Software, AI, Web & Mobile Development"
+        description="Explore our comprehensive range of IT services including software development, AI/ML solutions, UI/UX design, and more."
+        canonical="https://softsmartz.com/services"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Header */}
@@ -28,7 +35,7 @@ const Services = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-muted-foreground max-w-2xl mx-auto"
             >
-              We offer a wide range of services designed to help your business 
+              We offer a wide range of services designed to help your business
               succeed in the digital landscape.
             </motion.p>
           </div>

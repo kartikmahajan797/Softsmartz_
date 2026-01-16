@@ -10,10 +10,16 @@ import { TechnologiesSection } from '@/components/sections/TechnologiesSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { SEO } from '@/components/seo/SEO';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Softsmartz - Digital Solutions & Software Development"
+        description="Transform your vision into powerful reality with our innovative software solutions, stunning designs, and AI-powered applications."
+        canonical="https://softsmartz.com/"
+      />
       <Navbar />
       <main>
         <HeroSection />

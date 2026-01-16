@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { services } from '@/components/sections/ServicesSection';
+import { SEO } from '@/components/seo/SEO';
 
 const serviceDetails: Record<string, { features: string[]; process: string[]; technologies: string[] }> = {
   'shopify': {
@@ -67,6 +68,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={service.title}
+        description={service.description}
+        canonical={`https://softsmartz.com/services/${serviceId}`}
+      />
       <Navbar />
       <main className="pt-24">
         {/* Header */}
@@ -76,7 +82,7 @@ const ServiceDetail = () => {
               <ArrowLeft size={18} />
               Back to Services
             </Link>
-            
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -106,8 +112,8 @@ const ServiceDetail = () => {
                 <h3 className="text-xl font-display font-semibold mb-6 text-foreground">Key Features</h3>
                 <ul className="space-y-3">
                   {details.features.map((feature, index) => (
-                    <motion.li 
-                      key={index} 
+                    <motion.li
+                      key={index}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 + (index * 0.1) }}
@@ -211,11 +217,11 @@ const ServiceDetail = () => {
                   Our Tech Stack
                 </span>
               </motion.div>
-              
+
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
                 Tools We Use
               </h2>
-              
+
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "80px" }}
@@ -233,14 +239,14 @@ const ServiceDetail = () => {
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
+                  transition={{
                     duration: 0.5,
                     delay: index * 0.1,
                     type: "spring",
                     stiffness: 100
                   }}
-                  whileHover={{ 
-                    scale: 1.15, 
+                  whileHover={{
+                    scale: 1.15,
                     y: -8,
                     rotate: [0, -2, 2, 0],
                     transition: { duration: 0.3 }
@@ -251,7 +257,7 @@ const ServiceDetail = () => {
                   <motion.div
                     className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"
                   />
-                  
+
                   {/* Main pill */}
                   <div className="relative px-8 py-4 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 group-hover:border-slate-500 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25 backdrop-blur-sm">
                     {/* Shine effect */}
@@ -266,10 +272,10 @@ const ServiceDetail = () => {
                         repeatDelay: 3
                       }}
                     />
-                    
+
                     {/* Inner gradient border */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    
+
                     {/* Text */}
                     <span className="relative text-white font-semibold text-sm md:text-base tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
                       {tech}
