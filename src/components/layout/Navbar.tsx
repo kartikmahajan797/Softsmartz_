@@ -42,7 +42,7 @@ export const Navbar = () => {
       <nav className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="text-2xl font-display font-bold text-foreground">
-            softsmartz<span className="text-primary">.</span>
+            Softsmartz<span className="text-primary">.</span>
           </span>
         </Link>
 

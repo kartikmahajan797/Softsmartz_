@@ -31,7 +31,7 @@ export const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
               <span className="text-2xl font-display font-bold text-white">
-                softsmartz<span className="text-primary">.</span>
+                Softsmartz<span className="text-primary">.</span>
               </span>
             </Link>
             <p className="text-white/60 mb-6 text-sm">
