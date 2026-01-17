@@ -112,7 +112,7 @@ const About = () => {
                   </p>
                   <p>
                     Today, we're proud to have served clients across 30+ countries, delivering
-                    over 200 successful projects that have helped businesses scale and succeed.
+                    over 50+ successful projects that have helped businesses scale and succeed.
                   </p>
                 </div>
               </motion.div>

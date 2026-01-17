@@ -18,17 +18,55 @@ export function ContactSection() {
     message: '',
   });
 
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState({ show: false, title: '', description: '', variant: 'default' });
 
-  const showToast = (title, description, variant = 'default') => {
+  const showToast = (title: string, description: string, variant: 'default' | 'destructive' = 'default') => {
     setToast({ show: true, title, description, variant });
     setTimeout(() => setToast({ show: false, title: '', description: '', variant: 'default' }), 3000);
   };
 
-  // Modified submit handler to save to Firestore with proper type
+  // Basic form validation
+  const validateForm = () => {
+    let tempErrors = { name: '', email: '', subject: '', message: '' };
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      tempErrors.name = 'Name is required';
+      isValid = false;
+    }
+    if (!formData.email.trim()) {
+      tempErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      tempErrors.email = 'Email is invalid';
+      isValid = false;
+    }
+    if (!formData.subject.trim()) {
+      tempErrors.subject = 'Subject is required';
+      isValid = false;
+    }
+    if (!formData.message.trim()) {
+      tempErrors.message = 'Message is required';
+      isValid = false;
+    }
+
+    setErrors(tempErrors);
+    return isValid;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validateForm()) return; // Stop if validation fails
+
     setIsSubmitting(true);
     try {
       await addDoc(collection(db, 'contacts'), {
@@ -41,6 +79,7 @@ export function ContactSection() {
 
       showToast('Message Sent!', 'We will get back to you within 24 hours.');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({ name: '', email: '', subject: '', message: '' });
     } catch (err: any) {
       console.error('Error saving contact:', err);
       const errMsg = err?.message || 'Unable to send message. Please try again later.';
@@ -51,9 +90,9 @@ export function ContactSection() {
     }
   };
 
-  // Add proper event typing for change handler
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setErrors((prev) => ({ ...prev, [e.target.name]: '' })); // Clear error on change
   };
 
   return (
@@ -127,7 +166,7 @@ export function ContactSection() {
                   <div>
                     <div className="text-sm text-gray-500">Address</div>
                     <span className="font-semibold text-gray-900">
-                      123 Tech Park, Innovation City
+                     Chandigarh
                     </span>
                   </div>
                 </div>
@@ -154,6 +193,7 @@ export function ContactSection() {
                       placeholder="John Doe"
                       className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
                     />
+                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
@@ -168,6 +208,7 @@ export function ContactSection() {
                       placeholder="john@example.com"
                       className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
                     />
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -183,6 +224,7 @@ export function ContactSection() {
                     placeholder="How can we help?"
                     className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
                   />
+                  {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
                 </div>
 
                 <div>
@@ -198,6 +240,7 @@ export function ContactSection() {
                     rows={5}
                     className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none"
                   />
+                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
 
                 <button 
