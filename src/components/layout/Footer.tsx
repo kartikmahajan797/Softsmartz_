@@ -16,10 +16,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/111269093', label: 'LinkedIn' },
   { icon: Twitter, href: '#', label: 'Twitter' },
   { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  { icon: Instagram, href: 'https://www.instagram.com/softsmartz13/', label: 'Instagram' },
 ];
 
 export const Footer = () => {
@@ -35,7 +35,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-white/60 mb-6 text-sm">
-              We're a team of creatives who are excited about unique ideas and help 
+              We're a team of creatives who are excited about unique ideas and help
               companies create amazing identities by crafting superior digital experiences.
             </p>
             <div className="flex gap-3">
@@ -100,7 +100,7 @@ export const Footer = () => {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
-                 Kartikmahajan797@gmail.com"
+                  Kartikmahajan797@gmail.com"
                 </a>
               </li>
               <li>
@@ -109,7 +109,7 @@ export const Footer = () => {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Phone size={16} className="text-primary flex-shrink-0" />
-                 +91 7717536523
+                  +91 7717536523
                 </a>
               </li>
             </ul>

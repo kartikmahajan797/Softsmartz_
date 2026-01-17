@@ -23,6 +23,12 @@ const technologies = [
   { name: 'Vue.js', color: 'bg-emerald-500 dark:bg-emerald-400', textColor: 'text-emerald-500 dark:text-emerald-300' },
   { name: 'Angular', color: 'bg-red-600 dark:bg-red-500', textColor: 'text-red-600 dark:text-red-400' },
   { name: 'GraphQL', color: 'bg-pink-600 dark:bg-pink-500', textColor: 'text-pink-600 dark:text-pink-400' },
+  { name: 'Wordpress', color: 'bg-pink-600 dark:bg-pink-500', textColor: 'text-pink-600 dark:text-pink-400' },
+  { name: 'Shopify', color: 'bg-blue-500 dark:bg-blue-400', textColor: 'text-blue-500 dark:text-blue-300' },
+  { name: 'Wix', color: 'bg-emerald-500 dark:bg-emerald-400', textColor: 'text-emerald-500 dark:text-emerald-300' },
+
+
+
 ];
 
 export const TechnologiesSection = () => {
