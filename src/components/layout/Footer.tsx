@@ -92,15 +92,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                <span>Chandigarh</span>
+                <span>Saya South X, Greater Noida West</span>
               </li>
               <li>
                 <a
-                  href="mailto:Kartikmahajan797@gmail.com"
+                  href="mailto:official.softsmartz@gmail.com"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
-                  Kartikmahajan797@gmail.com"
+                  official.softsmartz@gmail.com"
                 </a>
               </li>
               <li>

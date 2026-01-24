@@ -141,8 +141,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email</div>
-                    <a href="mailto: Kartikmahajan797@gmail.com" className="font-semibold text-gray-900 hover:text-orange-500 transition-colors">
-                      Kartikmahajan797@gmail.com
+                    <a href="mailto: official.softsmartz@gmail.com" className="font-semibold text-gray-900 hover:text-orange-500 transition-colors">
+                      official.softsmartz@gmail.com
                     </a>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export function ContactSection() {
                   <div>
                     <div className="text-sm text-gray-500">Address</div>
                     <span className="font-semibold text-gray-900">
-                     Chandigarh
+                     Saya South X, Greater Noida West
                     </span>
                   </div>
                 </div>
