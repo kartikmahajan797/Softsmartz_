@@ -100,7 +100,7 @@ export const Footer = () => {
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
-                  official.softsmartz@gmail.com"
+                  info@softsmartz.com
                 </a>
               </li>
               <li>
