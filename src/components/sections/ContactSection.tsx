@@ -10,7 +10,7 @@ import { db } from '@/firebaseConfig';
 export function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -125,7 +125,7 @@ export function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-gray-600 mb-10"
               >
-                We're a team of creatives who are excited about unique ideas and help 
+                We're a team of creatives who are excited about unique ideas and help
                 companies create amazing identities by crafting superior digital experiences.
               </motion.p>
 
@@ -141,8 +141,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500">Email</div>
-                    <a href="mailto: official.softsmartz@gmail.com" className="font-semibold text-gray-900 hover:text-orange-500 transition-colors">
-                      official.softsmartz@gmail.com
+                    <a href="mailto: info@softsmartz.com" className="font-semibold text-gray-900 hover:text-orange-500 transition-colors">
+                      info@softsmartz.com
                     </a>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export function ContactSection() {
                   <div>
                     <div className="text-sm text-gray-500">Address</div>
                     <span className="font-semibold text-gray-900">
-                     Saya South X, Greater Noida West
+                      Saya South X, Greater Noida West
                     </span>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export function ContactSection() {
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
 
-                <button 
+                <button
                   type="submit"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}

@@ -96,7 +96,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:official.softsmartz@gmail.com"
+                  href="mailto:info@softsmartz.com"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
