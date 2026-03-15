@@ -18,6 +18,17 @@ import urban from '../assets/urban.png'
 import camp from '../assets/camp.png'
 import fire from '../assets/fire.png'
 import tridenity from '../assets/tridenity.png'
+import trycelivida from '../assets/trycelivida.png'
+import elixer from '../assets/elixer.png'
+import darmor from '../assets/darmor.png'
+import borcelle from '../assets/borcelle.png'
+import glowing from '../assets/glowing.png'
+import atlinex from '../assets/atlinex.png'
+import warehouse from '../assets/warehouse.png'
+import kaizgar from '../assets/kaizgar.png'
+import seoul from '../assets/seoul.png'
+import molana from '../assets/molana.png'
+import ferno from '../assets/ferno.png'
 
 const projects = [
   {
@@ -149,6 +160,111 @@ const projects = [
     liveUrl: 'https://www.tridenity.com/',
     tags: ['Next.js', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'UI/UX', 'Agency'],
   }
+  // New Project
+  ,
+  {
+    id: 12,
+    title: 'Trycelivida',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based health and wellness e-commerce store for Celivida, offering clinically backed NAD+ supplements designed to boost energy, support cellular health, and promote longevity — featuring a clean UI, product showcases, and a seamless shopping experience.',
+    image: trycelivida,
+    liveUrl: 'https://trycelivida.com/',
+    tags: ['Shopify', 'E-Commerce', 'Health & Wellness', 'UI/UX', 'Payment Gateway'],
+  }
+  ,
+  {
+    id: 13,
+    title: 'Elixer',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based health and wellness e-commerce store for ELIXER, a UK-based brand offering CBD oils, NMN supplements, and wellness products for pain relief, anxiety management, longevity, and performance — with clean sourcing, BRCGS-certified manufacturing, and a seamless shopping experience.',
+    image: elixer,
+    liveUrl: 'https://www.elixer.co.uk/',
+    tags: ['Shopify', 'E-Commerce', 'Health & Wellness', 'UI/UX', 'Payment Gateway'],
+  },
+  {
+    id: 14,
+    title: '3-D Armor',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based e-commerce store for 3-D Armor, offering an engineered padded bass drum harness designed to reduce strain and boost comfort for marching band percussionists — featuring a clean product-focused UI, risk-free trial offer, and a seamless checkout experience.',
+    image: darmor,
+    liveUrl: 'https://3-darmor.com/',
+    tags: ['Shopify', 'E-Commerce', 'Product Store', 'UI/UX', 'Payment Gateway'],
+  },
+  {
+    id: 15,
+    title: 'Ecomency Sites',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based dropshipping store for Ecomency Sites, featuring the LED Pear Fruit Silicone Night Light — a 7-color, touch-controlled, USB rechargeable sleep aid. The store showcases a conversion-optimized product page with science-backed copy, customer testimonials, and a seamless checkout experience.',
+    image: borcelle,
+    liveUrl: 'https://ecomencysites.myshopify.com/',
+    tags: ['Shopify', 'E-Commerce', 'Dropshipping', 'UI/UX', 'Payment Gateway'],
+  },
+  {
+    id: 16,
+    title: 'Glowing Anime',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based dropshipping store for Glowing Anime, offering anime-themed LED lighting and neon decor products. The store features a vibrant, fan-focused UI with conversion-optimized product pages, customer testimonials, and a seamless checkout experience.',
+    image: glowing,
+    liveUrl: 'https://glowinganime.com/',
+    tags: ['Shopify', 'E-Commerce', 'Dropshipping', 'Anime', 'UI/UX'],
+  }
+  ,
+  {
+    id: 17,
+    title: 'Atlinex',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based health and wellness e-commerce store for Atlinex, a premier USA-based supplement brand delivering science-backed vitamins and supplements crafted with premium ingredients. The store features a clean, trust-focused UI with curated product collections, customer reviews, and a 60-day money-back guarantee.',
+    image: atlinex,
+    liveUrl: 'https://atlinex.com/',
+    tags: ['Shopify', 'E-Commerce', 'Health & Wellness', 'Supplements', 'UI/UX'],
+  },
+  {
+    id: 18,
+    title: 'Infinity Warehouse',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based beauty and gifting e-commerce store for Infinity Warehouse, an Australian brand offering skincare, makeup, fragrances, jewelry, and curated gift sets. The store features a clean, product-rich UI with brand collections, best sellers, new arrivals, and a seamless shopping experience.',
+    image: warehouse,
+    liveUrl: 'https://infinitywarehouse.com.au/',
+    tags: ['Shopify', 'E-Commerce', 'Beauty', 'Gifting', 'UI/UX'],
+  },
+  {
+    id: 19,
+    title: 'Kaizgar',
+    category: 'Shopify E-Commerce',
+    description: 'A multi-product Shopify e-commerce store for Kaizgar, serving as an online bazaar and discounter. The platform features an extensive catalog across various categories with a focus on affordable pricing, worldwide shipping, 24/7 support, and a user-friendly browsing experience.',
+    image: kaizgar,
+    liveUrl: 'https://kaizgar.fr/#',
+    tags: ['Shopify', 'E-Commerce', 'Multi-brand', 'Disccounter', 'UI/UX'],
+  },
+  {
+    id: 20,
+    title: 'Seoul Luma',
+    category: 'Shopify E-Commerce',
+    description: 'A dedicated Shopify e-commerce store for Seoul Luma, specializing in 100% authentic Korean skincare products. The platform offers a clean, beauty-focused shopping experience featuring top K-beauty brands like COSRX, LANEIGE, and Anua, with direct shipping from South Korea.',
+    image: seoul,
+    liveUrl: 'https://seoul-luma.com/',
+    tags: ['Shopify', 'E-Commerce', 'Skincare', 'K-Beauty', 'UI/UX'],
+  }
+  ,
+  {
+    id: 21,
+    title: 'Mo’Lanna',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based e-commerce store for Mo’Lanna, a premier fragrance house dedicated to celebrating individuality through scent. The platform features an elegant and immersive shopping experience for discovering unique, memory-evoking perfumes and exploring the art of fragrance.',
+    image: molana,
+    liveUrl: 'https://molanna.com/',
+    tags: ['Shopify', 'E-Commerce', 'Fragrances', 'Beauty', 'UI/UX'],
+  },
+  {
+    id: 22,
+    title: 'FerNo Fashion & Lifestyle',
+    category: 'Shopify E-Commerce',
+    description: 'A Shopify-based fashion and lifestyle e-commerce store for FerNo, offering a curated collection of men\'s, women\'s, and children\'s apparel, footwear, and accessories. The Dutch platform features a clean, categorized shopping experience with seamless navigation for discovering trendy clothing and vintage-style caps.',
+    image: ferno,
+    liveUrl: 'https://fernofashionlifestyle.com/',
+    tags: ['Shopify', 'E-Commerce', 'Fashion', 'Apparel', 'UI/UX'],
+  }
+
 
 ];
 
