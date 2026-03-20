@@ -13,6 +13,19 @@ import herlogo from '../../assets/herlogo.png';
 import urblogo from '../../assets/urblogo.png';
 import angLogo from '../../assets/angLogo.png';
 import dam from '../../assets/dam.png';
+import client01 from '../../assets/client01.png'
+import client02 from '../../assets/client02.png'
+import client03 from '../../assets/client03.png'
+import client04 from '../../assets/client04.png'
+import client05 from '../../assets/client05.png'
+import client06 from '../../assets/client06.png'
+
+
+
+
+
+
+
 // import knot from '../../assets/knot.png';
 
 const clients = [
@@ -28,6 +41,12 @@ const clients = [
   { name: 'StartupX', initials: 'SX', image: urblogo, color: 'text-yellow-600' },
   { name: 'StartupX', initials: 'SX', image: angLogo, color: 'text-lime-600' },
   { name: 'StartupX', initials: 'SX', image: dam, color: 'text-rose-600' },
+  { name: 'Client One', initials: 'C1', image: client01, color: 'text-sky-600' },
+  { name: 'Client Two', initials: 'C2', image: client02, color: 'text-fuchsia-600' },
+  { name: 'Client Three', initials: 'C3', image: client03, color: 'text-emerald-600' },
+  { name: 'Client Four', initials: 'C4', image: client04, color: 'text-amber-600' },
+  { name: 'Client Five', initials: 'C5', image: client05, color: 'text-rose-500' },
+  { name: 'Client Six', initials: 'C6', image: client06, color: 'text-indigo-500' },
   // { name: 'StartupX', initials: 'SX', image: knot, color: 'text-violet-600' },
 ];
 
