@@ -166,7 +166,7 @@ export function ContactSection() {
                   <div>
                     <div className="text-sm text-gray-500">Address</div>
                     <span className="font-semibold text-gray-900">
-                      Saya South X, Greater Noida West
+                      Sector 67, Mohali, Chandigarh, India
                     </span>
                   </div>
                 </div>
