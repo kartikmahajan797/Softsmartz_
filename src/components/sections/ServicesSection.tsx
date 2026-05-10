@@ -2,79 +2,72 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ShoppingBag, 
-  Palette, 
-  Layout, 
-  Code, 
-  Brain, 
-  Smartphone, 
-  Globe
-  
-} from 'lucide-react';
+import { ArrowUpRight, ShoppingBag, Palette, Layout, Code, Brain, Smartphone, Globe, TrendingUp, Package, Search } from 'lucide-react';
 
 export const services = [
   {
     id: 'ai-ml',
     icon: Brain,
     title: 'Artificial Intelligence',
-    description: 'With AI solutions and machine learning, our websites and apps are designed to understand your business needs. AI Chatbots help improve customer experiences.',
+    description: 'AI/ML solutions, intelligent chatbots, and automation systems designed to understand your business and boost customer experience.',
+    tag: 'AI / ML',
   },
   {
     id: 'app-development',
     icon: Smartphone,
-    title: 'Mobile app development',
-    description: 'We build Intelligent mobile apps for Android & iOS platforms, handling everything from scratch to deployment, testing, and post-launch maintenance.',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform apps for Android & iOS — from concept to deployment, testing, and post-launch maintenance.',
+    tag: 'iOS & Android',
   },
   {
     id: 'software-development',
     icon: Code,
-    title: 'Software development',
-    description: 'We are experts at showing our creativity and delivering solutions for static & dynamic websites and software to bring them to the top position.',
+    title: 'Software Development',
+    description: 'Custom static and dynamic software solutions built with modern frameworks, engineered for performance and scale.',
+    tag: 'Full-Stack',
   },
   {
     id: 'shopify',
     icon: ShoppingBag,
     title: 'Shopify Development',
-    description: 'Custom Shopify stores with seamless checkout experiences, inventory management, and powerful e-commerce solutions for your business.',
+    description: 'Custom Shopify stores with seamless checkout, inventory management, and powerful conversion-optimized e-commerce solutions.',
+    tag: 'E-Commerce',
   },
   {
     id: 'ui-ux',
     icon: Layout,
     title: 'UI/UX Design',
-    description: 'User-centered designs that create intuitive, engaging, and delightful digital experiences with modern aesthetics.',
+    description: 'User-centered designs that create intuitive, engaging, and delightful digital experiences using research-driven modern aesthetics.',
+    tag: 'Design',
   },
   {
     id: 'graphic-design',
     icon: Palette,
-    title: 'Graphic Designing',
-    description: 'Stunning visual identities, logos, and marketing materials that capture your brand essence and stand out.',
+    title: 'Graphic Design',
+    description: 'Stunning visual identities, logos, and marketing materials that capture your brand essence and stand out in the crowd.',
+    tag: 'Branding',
   },
   {
     id: 'web-development',
     icon: Globe,
     title: 'Web App Development',
-    description: 'Modern web applications with cutting-edge frameworks, responsive designs, and performant architecture.',
+    description: 'Modern web applications with cutting-edge frameworks, responsive designs, and performant architecture that scales.',
+    tag: 'Web',
   },
   {
-  id: 'branding-marketing',
-  icon: ShoppingBag,
-  title: 'Branding & Marketing',
-  description: 'Professional branding and digital marketing services including brand strategy, logo design, content marketing, social media marketing, and performance-driven campaigns to grow brand awareness and customer engagement.',
-},
-{
-  id: 'packaging-design',
-  icon: Palette,
-  title: 'Packaging Design',
-  description: 'Custom packaging design services focused on product branding, creative packaging, label design, and print-ready solutions that enhance shelf impact, brand recognition, and customer experience.',
-},
-{
-  id: 'seo-services',
-  icon: Globe,
-  title: 'SEO Services',
-  description: 'Result-driven SEO services including on-page SEO, off-page SEO, technical SEO, keyword research, content optimization, and performance tracking to improve website rankings, organic traffic, and online visibility.',
-}
-
+    id: 'branding-marketing',
+    icon: TrendingUp,
+    title: 'Branding & Marketing',
+    description: 'End-to-end branding and digital marketing: brand strategy, content, social media, and performance-driven campaigns.',
+    tag: 'Marketing',
+  },
+  {
+    id: 'seo-services',
+    icon: Search,
+    title: 'SEO Services',
+    description: 'Data-driven SEO — on-page, off-page, technical, and content optimization — to improve rankings and organic traffic.',
+    tag: 'SEO',
+  },
 ];
 
 export const ServicesSection = () => {
@@ -82,31 +75,40 @@ export const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="section-padding bg-background">
+    <section ref={ref} className="section-padding bg-secondary/40">
       <div className="container-custom">
+
         <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.4 }}
+            className="text-xs font-bold uppercase tracking-widest text-primary"
+          >
+            What We Do
+          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4"
-          >
-            Our Service
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-muted-foreground text-lg max-w-2xl mx-auto"
+            className="mt-3 text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground"
           >
-            Meet your business needs with our wide range of IT services. We aim to 
-            provide full-cycle development services to fulfill your requirements.
+            Services built for
+            <br />
+            <span className="gradient-text">every stage of growth</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto"
+          >
+            Full-cycle development services designed to meet your business needs — from idea to launch and beyond.
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.slice(0, 6).map((service, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
@@ -115,14 +117,35 @@ export const ServicesSection = () => {
             >
               <Link
                 to={`/services/${service.id}`}
-                className="block service-card h-full group"
+                className="group flex flex-col h-full bg-card border border-border rounded-2xl p-7 hover:border-primary/40 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
               >
-                <h3 className="text-xl font-display font-semibold mb-4 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm leading-relaxed">
-                  {service.description}
-                </p>
+                {/* Hover gradient glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
+
+                <div className="relative z-10 flex-1">
+                  {/* Icon + tag row */}
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <service.icon size={22} className="text-primary group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <span className="text-xs font-semibold text-muted-foreground bg-secondary px-3 py-1 rounded-full border border-border">
+                      {service.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="font-display font-bold text-lg text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Arrow */}
+                <div className="relative z-10 mt-5 flex items-center gap-1.5 text-xs font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                  Learn more
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                </div>
               </Link>
             </motion.div>
           ))}

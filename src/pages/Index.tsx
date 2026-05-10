@@ -1,11 +1,11 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
-import { ClientsSection } from '@/components/sections/ClientsSection';
-import { ServiceLogosSection } from '@/components/sections/ServiceLogosSection';
-import { AboutSection } from '@/components/sections/AboutSection';
+import { ValuePropositionSection } from '@/components/sections/ValuePropositionSection';
+import { ApproachSection } from '@/components/sections/ApproachSection';
+import { WhyUsSection } from '@/components/sections/WhyUsSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
-import { TechSection } from '@/components/sections/TechSection';
+import { IndustriesSection } from '@/components/sections/IndustriesSection';
 import { TechnologiesSection } from '@/components/sections/TechnologiesSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
@@ -22,15 +22,34 @@ const Index = () => {
       />
       <Navbar />
       <main>
+        {/* 1. Hero — strong first impression with headline + stats + marquee */}
         <HeroSection />
-        <ClientsSection />
-        <ServiceLogosSection />
-        <AboutSection />
+
+        {/* 2. Value Proposition — "Typical vs Softsmartz Way" contrast */}
+        <ValuePropositionSection />
+
+        {/* 3. How We Work — 4-step approach */}
+        <ApproachSection />
+
+        {/* 4. Why Choose Us — 6 advantage cards on dark background */}
+        <WhyUsSection />
+
+        {/* 5. Services — full service catalog */}
         <ServicesSection />
-        <TechSection />
+
+        {/* 6. Industries — domain expertise */}
+        <IndustriesSection />
+
+        {/* 7. Technologies — tech stack */}
         <TechnologiesSection />
+
+        {/* 8. Portfolio — selected work */}
         <PortfolioSection />
+
+        {/* 9. Testimonials — social proof */}
         <TestimonialsSection />
+
+        {/* 10. Contact — conversion */}
         <ContactSection />
       </main>
       <Footer />
