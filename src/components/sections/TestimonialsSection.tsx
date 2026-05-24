@@ -8,28 +8,28 @@ const testimonials = [
     id: 1,
     content: "They got the job done quickly as part of a multi-step process I had designed with the team to match my budget. We worked in phases to roll out updates for my application. Great job as always!",
     author: "Brent Hagel",
-    role: "CEO, Epic Voicemails",
+    // role: "CEO, Epic Voicemails",
     rating: 5,
     label: "Design Quality",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    // avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 2,
     content: "Softsmartz delivered exceptional quality work on time. Their attention to detail and commitment to our vision exceeded all expectations. Highly recommended for any tech project!",
     author: "Sarah Chen",
-    role: "Founder, TechStart",
+    // role: "Founder, TechStart",
     rating: 5,
     label: "Technical Excellence",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+    // avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
   },
   {
     id: 3,
     content: "Working with Softsmartz was a game-changer for our business. Their AI solutions helped us automate processes and increase efficiency by 300%. Truly transformative!",
     author: "Michael Roberts",
-    role: "CTO, InnovateCorp",
+    // role: "CTO, InnovateCorp",
     rating: 5,
     label: "Innovation",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    // avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
 ];
 
@@ -90,18 +90,12 @@ export const TestimonialsSection = () => {
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <img
-                  src={testimonials[currentIndex].avatar}
-                  alt={testimonials[currentIndex].author}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
+              
                 <div>
                   <div className="font-display font-semibold text-foreground">
                     {testimonials[currentIndex].author}
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonials[currentIndex].role}
-                  </div>
+                 
                 </div>
               </div>
 
