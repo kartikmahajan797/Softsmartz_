@@ -29,6 +29,8 @@ import kaizgar from '../assets/kaizgar.png'
 import seoul from '../assets/seoul.png'
 import molana from '../assets/molana.png'
 import ferno from '../assets/ferno.png'
+import desidaharah from '../assets/desidaharah.png';
+import sg from '../assets/sg.png'
 
 const projects = [
   {
@@ -263,7 +265,26 @@ const projects = [
     image: ferno,
     liveUrl: 'https://fernofashionlifestyle.com/',
     tags: ['Shopify', 'E-Commerce', 'Fashion', 'Apparel', 'UI/UX'],
-  }
+  },
+  {
+  id: 23,
+  title: 'DesiDhara Naturals',
+  category: 'Shopify E-Commerce',
+  description: 'A premium Shopify-based natural wellness and organic products e-commerce platform for DesiDhara. The website showcases traditionally crafted products including A2 Desi Ghee, Raw Forest Honey, and Organic Jaggery, emphasizing purity, sustainability, and authentic Indian traditions. The platform offers a clean shopping experience with detailed product storytelling, transparent sourcing, lab reports, and seamless navigation for health-conscious consumers seeking natural and preservative-free products.', 
+  image: desidaharah,
+  liveUrl: 'https://www.desidhara.org/',
+  tags: ['Shopify', 'E-Commerce', 'Organic Products', 'Health & Wellness', 'UI/UX'],
+},
+
+{
+  id: 24,
+  title: 'SG Premium Properties',
+  category: 'Real Estate Website',
+  description: 'A modern real estate platform designed for SG Premium Properties, helping buyers, investors, and property seekers discover premium residential and commercial properties. The website features detailed property listings, project showcases, investment opportunities, location insights, and streamlined inquiry management, delivering a professional and user-friendly experience for clients looking to buy, sell, or invest in real estate.',
+  image: sg,
+  liveUrl: 'https://www.sgpremiumproperties.com/',
+  tags: ['Real Estate', 'Property Listings', 'CRM Integration', 'Lead Generation', 'UI/UX'],
+}
 
 
 ];
