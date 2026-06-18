@@ -59,7 +59,7 @@ export const WhyUsSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="section-padding bg-foreground">
+    <section ref={ref} className="section-padding section-dark">
       <div className="container-custom">
 
         <div className="text-center mb-16">

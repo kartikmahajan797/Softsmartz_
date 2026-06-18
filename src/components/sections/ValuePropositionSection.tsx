@@ -89,7 +89,7 @@ export const ValuePropositionSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.3 }}
-            className="relative bg-foreground rounded-2xl p-8 overflow-hidden"
+            className="relative section-dark rounded-2xl p-8 overflow-hidden"
           >
             {/* Orange glow accent */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
