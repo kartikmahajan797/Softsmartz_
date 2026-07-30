@@ -9,6 +9,7 @@ import { IndustriesSection } from '@/components/sections/IndustriesSection';
 import { TechnologiesSection } from '@/components/sections/TechnologiesSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { PartnerCTASection } from '@/components/sections/PartnerCTASection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { SEO } from '@/components/seo/SEO';
 
@@ -49,7 +50,10 @@ const Index = () => {
         {/* 9. Testimonials — social proof */}
         <TestimonialsSection />
 
-        {/* 10. Contact — conversion */}
+        {/* 10. Partnership — engagement models */}
+        <PartnerCTASection />
+
+        {/* 11. Contact — conversion */}
         <ContactSection />
       </main>
       <Footer />

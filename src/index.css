@@ -238,6 +238,112 @@
     transform: translateY(-4px);
   }
 
+  /* ---------------------------------------------------------------
+     Premium surfaces — used by Portfolio, Case Studies & Partner pages
+     --------------------------------------------------------------- */
+
+  /* Frosted card that adapts to light/dark automatically */
+  .glass-card {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+    border-radius: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 24px 60px hsl(220 20% 10% / 0.12);
+    transform: translateY(-6px);
+  }
+
+  .dark .glass-card:hover {
+    box-shadow: 0 24px 60px hsl(0 0% 0% / 0.5);
+  }
+
+  /* Card whose border lights up with a gradient on hover */
+  .premium-card {
+    position: relative;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .premium-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(24 95% 53% / 0.7), transparent 40%, transparent 60%, hsl(35 95% 55% / 0.5));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .premium-card:hover::after {
+    opacity: 1;
+  }
+
+  .premium-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px hsl(220 20% 10% / 0.12);
+  }
+
+  .dark .premium-card:hover {
+    box-shadow: 0 24px 60px hsl(0 0% 0% / 0.5);
+  }
+
+  /* Subtle blueprint grid used behind hero areas */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Soft coloured light bloom — position with absolute utilities */
+  .aurora {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .dark .aurora {
+    opacity: 0.28;
+  }
+
+  /* Small uppercase section label with a leading rule */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 1px;
+    background: hsl(var(--primary));
+  }
+
   /* Colored accents */
   .accent-orange { color: hsl(24, 95%, 53%); }
   .accent-blue { color: hsl(210, 90%, 55%); }
@@ -273,6 +379,28 @@
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px hsl(24 95% 53% / 0.3); }
   50% { box-shadow: 0 0 40px hsl(24 95% 53% / 0.5); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float,
+  .animate-pulse-glow {
+    animation: none;
+  }
 }
 
 .animate-float {

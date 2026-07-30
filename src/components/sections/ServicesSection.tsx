@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ShoppingBag, Palette, Layout, Code, Brain, Smartphone, Globe, TrendingUp, Package, Search } from 'lucide-react';
+import { ArrowUpRight, ShoppingBag, Palette, Layout, Code, Brain, Smartphone, Globe, TrendingUp, Search, Bot, Boxes, Infinity as InfinityIcon } from 'lucide-react';
 
 export const services = [
   {
@@ -11,6 +11,27 @@ export const services = [
     title: 'Artificial Intelligence',
     description: 'AI/ML solutions, intelligent chatbots, and automation systems designed to understand your business and boost customer experience.',
     tag: 'AI / ML',
+  },
+  {
+    id: 'ai-agents',
+    icon: Bot,
+    title: 'AI Agents & Chatbots',
+    description: 'Autonomous agents, RAG assistants, and voice or chat bots that resolve real work end to end — with tool access, guardrails, and human escalation.',
+    tag: 'Agents & Bots',
+  },
+  {
+    id: 'saas-development',
+    icon: Boxes,
+    title: 'SaaS Product Engineering',
+    description: 'Multi-tenant SaaS platforms with subscription billing, role-based access, usage metering, and the observability to run them at scale.',
+    tag: 'SaaS',
+  },
+  {
+    id: 'devops',
+    icon: InfinityIcon,
+    title: 'DevOps & Cloud Engineering',
+    description: 'CI/CD pipelines, Kubernetes, infrastructure-as-code, and full-stack observability — so releases become routine instead of risky.',
+    tag: 'DevOps / SRE',
   },
   {
     id: 'app-development',

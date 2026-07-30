@@ -8,10 +8,11 @@ import { useTheme } from 'next-themes';
 
 const navLinks = [
   { name: 'Services', path: '/services' },
-  { name: 'Company', path: '/about' },
   { name: 'Our Work', path: '/portfolio' },
+  { name: 'Case Studies', path: '/case-studies' },
+  { name: 'Partner With Us', path: '/partner' },
+  { name: 'Company', path: '/about' },
   { name: 'Blog', path: '/blog' },
-  { name: 'Contact Us', path: '/contact' },
 ];
 
 export const Navbar = () => {
@@ -48,24 +49,27 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={cn(
-                'font-medium text-sm transition-colors duration-200 hover:text-primary',
+                'relative font-medium text-sm whitespace-nowrap transition-colors duration-200 hover:text-primary',
                 location.pathname === link.path
                   ? 'text-foreground'
                   : 'text-muted-foreground'
               )}
             >
               {link.name}
+              {location.pathname === link.path && (
+                <span className="absolute -bottom-1.5 left-0 right-0 h-0.5 rounded-full bg-primary" />
+              )}
             </Link>
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <button
             aria-label="Toggle theme"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -90,7 +94,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground p-2"
+          className="lg:hidden text-foreground p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -105,7 +109,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-t border-border"
+            className="lg:hidden bg-background border-t border-border"
           >
             <div className="container-custom py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -123,6 +127,18 @@ export const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className={cn(
+                  'font-medium py-2 transition-colors',
+                  location.pathname === '/contact'
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                Contact Us
+              </Link>
               <div className="pt-2">
                 <button
                   aria-label="Toggle theme"

@@ -33,6 +33,31 @@ const serviceDetails: Record<string, { features: string[]; process: string[]; te
     process: ['Data Collection', 'Model Training', 'Validation', 'Integration', 'Monitoring'],
     technologies: ['TensorFlow', 'PyTorch', 'Python', 'OpenAI', 'Scikit-learn'],
   },
+  'ai-agents': {
+    features: ['Autonomous multi-agent systems', 'RAG knowledge assistants with citations', 'Voice, WhatsApp & web chatbots', 'Tool calling and CRM actions', 'Guardrails, evals & human escalation'],
+    process: ['Use-case Scoping', 'Data & Tool Mapping', 'Agent Design', 'Evaluation Harness', 'Production Rollout'],
+    technologies: ['Claude API', 'LangGraph', 'Python', 'pgvector', 'MCP', 'FastAPI'],
+  },
+  'saas-development': {
+    features: ['Multi-tenant architecture', 'Subscription billing & usage metering', 'Role-based access and audit trails', 'Admin, analytics & reporting layer', 'Scalable event-driven backend'],
+    process: ['Product Discovery', 'Architecture & Tenancy Model', 'Iterative Build', 'Load & Security Testing', 'Launch & Scale'],
+    technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis', 'Stripe', 'Kubernetes'],
+  },
+  'devops': {
+    features: ['CI/CD pipeline automation', 'Kubernetes & container orchestration', 'Infrastructure as code', 'Monitoring, logging & alerting', 'Cost optimisation and security hardening'],
+    process: ['Infrastructure Audit', 'Pipeline Design', 'Automation & IaC', 'Observability Setup', 'Continuous Improvement'],
+    technologies: ['Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Prometheus', 'Grafana'],
+  },
+  'branding-marketing': {
+    features: ['Brand strategy & positioning', 'Visual identity systems', 'Content and social media', 'Performance ad campaigns', 'Analytics & attribution'],
+    process: ['Brand Audit', 'Strategy', 'Creative Development', 'Campaign Launch', 'Measure & Optimise'],
+    technologies: ['Figma', 'Meta Ads', 'Google Ads', 'HubSpot', 'GA4'],
+  },
+  'seo-services': {
+    features: ['Technical SEO audits', 'On-page optimisation', 'Content strategy', 'Link building & digital PR', 'Rank and traffic reporting'],
+    process: ['Audit & Benchmark', 'Keyword Strategy', 'Technical Fixes', 'Content & Authority', 'Reporting'],
+    technologies: ['Google Search Console', 'GA4', 'Ahrefs', 'Semrush', 'Schema.org'],
+  },
   'app-development': {
     features: ['iOS development', 'Android development', 'Cross-platform apps', 'App store optimization', 'Push notifications'],
     process: ['Concept', 'UI/UX Design', 'Development', 'Testing', 'Launch'],

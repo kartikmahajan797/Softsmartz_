@@ -4,14 +4,19 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'luc
 const footerLinks = {
   company: [
     { name: 'About Us', path: '/about' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Our Work', path: '/portfolio' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Partner With Us', path: '/partner' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ],
   services: [
+    { name: 'SaaS Product Engineering', path: '/services/saas-development' },
+    { name: 'AI Agents & Chatbots', path: '/services/ai-agents' },
+    { name: 'DevOps & Cloud', path: '/services/devops' },
+    { name: 'AI/ML Solutions', path: '/services/ai-ml' },
     { name: 'Web Development', path: '/services/web-development' },
     { name: 'App Development', path: '/services/app-development' },
-    { name: 'AI/ML Solutions', path: '/services/ai-ml' },
-    { name: 'UI/UX Design', path: '/services/ui-ux' },
   ],
 };
 
