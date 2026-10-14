@@ -152,10 +152,7 @@ export function ContactSection() {
                     <Phone className="text-white" size={20} />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-500">Phone</div>
-                    <a href="tel:+1234567890" className="font-semibold text-gray-900 hover:text-orange-500 transition-colors">
-                      +91 7717536523
-                    </a>
+                   
                   </div>
                 </div>
 

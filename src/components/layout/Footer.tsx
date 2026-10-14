@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -106,15 +106,6 @@ export const Footer = () => {
                 >
                   <Mail size={16} className="text-primary flex-shrink-0" />
                   info@softsmartz.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-3 text-sm text-white/60 hover:text-primary transition-colors"
-                >
-                  <Phone size={16} className="text-primary flex-shrink-0" />
-                  +91 7717536523
                 </a>
               </li>
             </ul>

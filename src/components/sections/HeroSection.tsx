@@ -23,7 +23,7 @@ export const HeroSection = () => {
             className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-primary">Your Trusted Software Engineering Partner</span>
+            <span className="text-sm font-medium text-primary">Helping Startups Build & Launch Worldwide</span>
           </motion.div>
 
           {/* Main headline */}
@@ -33,11 +33,9 @@ export const HeroSection = () => {
             transition={{ duration: 0.55, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.08] tracking-tight mb-6"
           >
-            Product Engineering
+            From Vision to
             <br />
-            <span className="gradient-text">Powered by Innovation</span>
-            <br />
-            That Drives Growth
+            <span className="gradient-text">Venture-Ready Product.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -47,8 +45,9 @@ export const HeroSection = () => {
             transition={{ duration: 0.55, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            We combine deep domain expertise with architectural excellence to create
-            custom digital platforms that compress timelines and drive measurable business growth.
+            We partner with startups to design, engineer, and launch world-class digital
+            experiences that users love. From AI solutions to scalable platforms, we help
+            founders move faster without compromising quality.
           </motion.p>
 
           {/* CTA Buttons */}
